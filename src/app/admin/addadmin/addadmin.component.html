@@ -1,0 +1,187 @@
+
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+
+      <form [formGroup]="firstFormGroup" class="frm1">
+        <div>
+        <ng-template matStepLabel>Admin Information</ng-template>
+        <ul>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" class="login-form" required>
+        </mat-form-field>
+        </ul>
+        
+      <ul>
+        <mat-form-field appearance="fill">  
+        <mat-label>Phone</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" class="login-form" required>
+        </mat-form-field>
+      </ul>
+    </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+          </div>
+      </form>
+      
+      <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
+    </mat-step>
+    
+
+
+
+
+
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+     
+      <form [formGroup]="secondFormGroup" class="frm2">
+        <div>
+          <ul>
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+            </mat-form-field>
+          </ul>
+          <ul>
+            <mat-form-field appearance="fill">
+              <mat-label>ville</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="New York" required>
+          </mat-form-field>
+          </ul>
+          <ul>
+            <mat-form-field appearance="fill">
+              <mat-label>Code Postal</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="Ex. 1000, NY" required>
+          </mat-form-field>
+          </ul>
+          
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+      
+      <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+
+    </mat-step>
+
+
+
+    <mat-step [stepControl]="secondFormGroup" label="Admin Role">
+     
+      <form [formGroup]="secondFormGroup" class="frm3">
+        <div>
+          <ul>
+            <mat-selection-list #shoes>
+              <mat-list-option *ngFor="let shoe of typesOfShoes">
+                {{shoe}}
+              </mat-list-option>
+            </mat-selection-list>
+            
+            <p>
+              Options selected: {{shoes.selectedOptions.selected.length}}
+            </p>
+          </ul>
+          <ul>
+            <mat-form-field>
+              <mat-label class="login-form">Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+          </mat-form-field>
+          </ul>
+          <ul>
+            <mat-form-field>
+              <mat-label class="login-form">Confirme your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </ul>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+          
+        </div>
+        
+
+      </form>
+      <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+    </mat-step>
+
+
+
+
+
+
+
+    <mat-step [stepControl]="secondFormGroup" label="Confirm Your Email">
+     
+      <form [formGroup]="secondFormGroup" class="frm4">
+        <div>
+          
+            <mat-form-field appearance="fill">
+                <mat-label>Code</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 855745" required>
+            </mat-form-field>
+          
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+      
+      <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+
+    </mat-step>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+
+      </div>
+    </mat-step>
+  </mat-stepper>
+  
+  

@@ -1,0 +1,121 @@
+
+<!--<p>     Name : {{dataSource.Name}}   </p>
+<p>     Ville  : {{dataSource.ville}}   </p>
+<p>     Email: {{dataSource.email}} </p>
+<p>     Telephone : {{dataSource.tel}}   </p>
+-->
+<header class="top_panel_wrap image_bg_7">
+	<div class="">
+		<div class="menu_content_wrap clearfix">
+			
+				<div class="login_wrap">
+				<a [routerLink]="['/auth']" routerLinkActive="router-link-active" class="popup_link popup_login_link">
+					Log in
+				</a>
+				</div>
+				<div class="login_wrap">
+					<a [routerLink]="['/']" class="popup_link popup_login_link">
+						
+						Home
+					</a>
+					</div>
+		</div>
+	</div>
+</header>
+<body>
+	<video autoplay muted loop id="myVideo">
+		<source [src]="bg" type="video/mp4">
+	  </video>
+
+	<div class="background-image" data-background="url(img/main_bg_2.jpg)">
+		<!--<img [src]="bgfinduser" class="bg-img">-->
+	    <div class="min-vh-100 d-flex flex-column opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+	        <div class="container my-auto">
+	            <div class="row">
+	                <div class="col-md-9 col-lg-7 col-xl-5 mx-auto my-4">
+	                    <div id="panel" class="panel header_2 center">
+	                       
+	                        <form class="input_style_2" method="post">
+	                            <div class="form-group">
+	                                <label for="full_name"><h4>Full Name</h4></label>
+	                                <input type="text" name="full_name" id="full_name" class="form-control" value="{{dataSource.Name}}" readonly>
+	                            </div>
+	                            <div class="form-group mb-4">
+	                                <label for="email_address"><h4>Ville</h4></label>
+	                                <input type="email" name="email_address" id="email_address" class="form-control" value="{{dataSource.ville}}" readonly>
+	                            </div>
+                                <div class="form-group">
+	                                <label for="full_name"><h4>Email</h4></label>
+	                                <input type="text" name="full_name" id="full_name" class="form-control" value="{{dataSource.email}}" readonly>
+	                            </div>
+                                <div class="form-group">
+	                                <label for="full_name"><h4>Telephone</h4></label>
+	                                <input type="text" name="full_name" id="full_name" class="form-control" value="{{dataSource.tel}}" readonly >
+	                            </div>
+	                            <h6>How was the service provided?</h6>
+	                            <div class="review_block_numbers mb-4">
+	                                <ul class="clearfix">
+	                                    <li>
+	                                        <div class="container_numbers">
+	                                            <input type="radio" id="very_bad_1" name="question_1" value="Very bad">
+	                                            <label class="radio very_bad" for="very_bad_1">1</label>
+	                                        </div>
+	                                    </li>
+	                                    <li>
+	                                        <div class="container_numbers">
+	                                            <input type="radio" id="bad_1" name="question_1" value="Bad">
+	                                            <label class="radio bad" for="bad_1">2</label>
+	                                        </div>
+	                                    </li>
+	                                    <li>
+	                                        <div class="container_numbers">
+	                                            <input type="radio" id="average_1" name="question_1" value="Average">
+	                                            <label class="radio average" for="average_1">3</label>
+	                                        </div>
+	                                    </li>
+	                                    <li>
+	                                        <div class="container_numbers">
+	                                            <input type="radio" id="good_1" name="question_1" value="Good">
+	                                            <label class="radio good" for="good_1">4</label>
+	                                        </div>
+	                                    </li>
+	                                    <li>
+	                                        <div class="container_numbers">
+	                                            <input type="radio" id="very_good_1" name="question_1" value="Very Good">
+	                                            <label class="radio very_good" for="very_good_1">5</label>
+	                                        </div>
+	                                    </li>
+	                                </ul>
+	                                <div class="row justify-content-between mb-3">
+	                                    <div class="col-4">
+	                                        <small><em>Very Bad</em></small>
+	                                    </div>
+	                                    <div class="col-4 text-right">
+	                                        <small><em>Very Good</em></small>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            
+	                           
+	                            <button type="submit" class="btn_1 full-width"><a href="/" >GO HOME</a></button>
+	                        </form>
+	                    </div>
+	                </div>
+	                <!-- /col -->
+	            </div>
+	            <!-- /row -->
+	        </div>
+	        <!-- /container -->
+	        <div class="container py-2 copy white">© 2021 FIND CAR - All Rights Reserved.</div>
+	    </div>
+	</div>
+	<!-- /background-image -->
+
+	<!-- Modal terms -->
+	
+
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+    
+</body>

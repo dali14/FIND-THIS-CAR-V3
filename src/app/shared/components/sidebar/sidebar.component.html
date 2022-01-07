@@ -1,0 +1,34 @@
+
+         <mat-nav-list>
+          <div class='profile-card'>
+            <div class='header'>
+              <img [src]="idpic" alt="">
+              <h2>Admin</h2>
+              <h4>Dalijlassi@gmail.com</h4>
+            </div>
+            <mat-divider></mat-divider>
+            <h2 matSubheader>Users Options</h2>
+            <a mat-list-item [routerLink]="['/admins/userliste']" routerLinkActive="router-link-active">
+            <mat-icon>people_outline</mat-icon>Show All Users
+        </a> 
+            <a mat-list-item [routerLink]="['/admins/carslist']" routerLinkActive="router-link-active"> 
+            <mat-icon>directions_car</mat-icon>Show all Cars
+        </a>
+            <mat-divider></mat-divider>
+
+            <h2 matSubheader>Admin Manager</h2>
+
+            <a mat-list-item [routerLink]="['/admins/adminliste']" routerLinkActive="router-link-active">
+            <mat-icon>people</mat-icon> Show All Admin
+            </a> 
+            <a mat-list-item [routerLink]="['/admin/addadmin']" routerLinkActive="router-link-active">
+                <mat-icon>person_add</mat-icon> Add Admin
+            </a> 
+           
+          </div>
+  
+        </mat-nav-list>
+      
+      
+    
+

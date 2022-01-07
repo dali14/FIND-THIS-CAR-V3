@@ -1,0 +1,67 @@
+
+<!--<p>     Car ID : {{dataSource.mat1}}   </p>
+<p>     Car ID : {{dataSource.mat2}}   </p>
+<p>     Car ID : {{dataSource.Matricule}} </p>
+<p>     Car ID : {{dataSource.model}}   </p>
+<p><a [routerLink]="['/user/',dataSource.id_user]" routerLinkActive="router-link-active" >user account</a></p>
+-->
+<header class="top_panel_wrap image_bg_7">
+	<div class="menu_main_wrap logo_left with_text">
+		<div class="menu_content_wrap clearfix">
+			
+				<div class="login_wrap">
+				<a [routerLink]="['/auth']" routerLinkActive="router-link-active" class="popup_link popup_login_link">
+					Log in
+				</a>
+				</div>
+				<div class="login_wrap">
+					<a [routerLink]="['/']" class="popup_link popup_login_link">
+						
+						Home
+					</a>
+					</div>
+		</div>
+	</div>
+</header>
+
+	<video autoplay muted loop id="myVideo">
+		<source [src]="bg" type="video/mp4">
+	  </video>
+	<div class="background-image">
+        <!--<img [src]="bgfind" class="bg-img">-->
+		
+	    <div id="form" class="min-vh-100 d-flex flex-column opacity-mask" data-opacity-mask="rgba(0, 0, 0, 6)">
+	        <div class="container my-auto">
+	            <div class="">
+	                <div class="col-md-9 col-lg-7 col-xl-5 mx-auto my-4">
+	                    <div class="">
+	                        
+	                        <form  id="form" class="" method="post">
+	                            <div class="form-group">
+	                                <input type="text" id="mat" class="form-control" value="{{dataSource.Matricule}}" readonly>
+	                            </div>
+								<br>
+	                            <div class="form-group">
+	                                <input type="text" id="model" class="form-control" value=" Model :{{dataSource.model}}" readonly>
+	                            </div>
+	                           <br>
+                               <br>
+                               
+	                            <button  id="btn" class="btn_1 full-width"><a [routerLink]="['/user/',dataSource.id_user]" routerLinkActive="router-link-active" >Contact User</a></button>
+	                        </form>
+	                    </div>
+	                </div>
+	                <!-- /col -->
+	            </div>
+	            <!-- /row -->
+	        </div>
+	        <!-- /container -->
+	        <div class="container py-2 copy white">© 2021  FIND CAR - All Rights Reserved.</div>
+	    </div>
+	</div>
+	<!-- /background-image -->
+
+	<!-- Modal terms -->
+	
+
+

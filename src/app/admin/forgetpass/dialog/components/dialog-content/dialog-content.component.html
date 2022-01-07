@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>we Send Code With SMS  :{{data.name}}</h1>
+
+<div mat-dialog-content>
+    <p>Put the Otp code here :</p>
+    <mat-form-field appearance="fill">
+      <mat-label>EX . 587547</mat-label>
+      <input matInput [(ngModel)]="data.tel" placeholder="">
+    </mat-form-field>
+    <p><a>Resend Code</a></p>
+<div mat-dialog-content>
+    <p>
+        receive you a code on your phone
+       </p>
+       <p>
+        the code is valid for 30 min
+       </p>
+       <p>
+        if the code  does not appear in your inbox .
+        check your Spam esle you can resend the code after (1 min)
+       </p>
+
+
+</div>
+<div mat-dialog-actions>
+    
+    <button mat-button [mat-dialog-close]="'CLOSE'">
+        CLOSE
+    </button>
+    <button mat-button mat-dialog-close> Confirm
+    </button>
+</div>
+<br>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>

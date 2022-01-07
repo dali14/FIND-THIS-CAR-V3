@@ -1,0 +1,20 @@
+
+
+
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card fxFlex="20">
+      <mat-toolbar color="primary">Reset Password</mat-toolbar>
+      <br>
+      <form fxLayoutAlign="stretch" fxLayout="column">
+        <mat-label>What's your phone Number ?</mat-label>
+        <br>
+        <input matInput placeholder="Phone Number" [(ngModel)]="name" class="login-form">
+          
+        <br>  
+              <button mat-raised-button color="primary" (click)="openDialog()">Send Code</button>
+          <br>
+          <p ><a routerLink="/admin">login</a></p>
+        </form>
+    </mat-card>
+</div>

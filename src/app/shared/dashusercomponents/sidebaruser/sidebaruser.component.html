@@ -1,0 +1,34 @@
+
+         <mat-nav-list>
+            <div class='profile-card'>
+              <div class='header'>
+                
+                <h2>{{dataSource.Name}}</h2>
+                <h4></h4>
+              </div>
+              <mat-divider></mat-divider>
+              <h2 matSubheader>Users Options</h2>
+              <a mat-list-item [routerLink]="['/profile/user/',iduser]" routerLinkActive="router-link-active">
+              <mat-icon>account_circle</mat-icon>My Profile
+          </a> 
+              <a mat-list-item [routerLink]="['/profile/mycars']" routerLinkActive="router-link-active"> 
+              <mat-icon>directions_car</mat-icon>My Cars
+          </a>
+              <mat-divider></mat-divider>
+  
+              <h2 matSubheader>Account Manager </h2>
+  
+              <a mat-list-item [routerLink]="['/profile/account/',iduser]" routerLinkActive="router-link-active">
+              <mat-icon>settings</mat-icon> Update information
+              </a> 
+              <a mat-list-item [routerLink]="['/profile/newcar/',iduser]" routerLinkActive="router-link-active">
+                <mat-icon>local_car_wash</mat-icon> Add New Car 
+                </a> 
+              <a mat-list-item>
+                  <mat-icon>settings_power</mat-icon>  Log out 
+              </a> 
+             
+            </div>
+    
+          </mat-nav-list>
+      

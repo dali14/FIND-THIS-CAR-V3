@@ -1,0 +1,55 @@
+<div class="listar-dashboardbanner">
+    <ol class="listar-breadcrumb">
+        <li><a href="">Home></a>>My Profile>add new car</li>
+        
+    </ol>
+    <h1>Add New Cars</h1>
+    <div class="listar-description">
+        
+    </div>
+</div>
+
+<div id="listar-content" class="listar-content">
+    <form class="listar-formtheme listar-formaddlisting" [formGroup]='registerForm' (ngSubmit)="newcar()">
+        <fieldset>
+            <div class="listar-boxtitle">
+                <h3>Hello : {{dataSource.pseudo}}</h3>
+                
+            </div>
+            <div class="listar-dashboardmyprofile">
+                
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>matricule 1</label>
+                            <input type="text" formControlName="mat1" class="form-control" placeholder="ex . 150">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Matricule 2</label>
+                            <input type="email" formControlName="mat2" class="form-control" placeholder="ex .2547">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Matricule </label>
+                            <input type="text" formControlName="Matricule" class="form-control" placeholder="ex . 150 Tunis 2547">
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Model</label>
+                            <input type="text" formControlName="model" class="form-control" placeholder="Ex . audi , ford ect ...">
+                        </div> 
+                    </div> 
+                    
+                    <button mat-button color="primary" type="submit">Add new cars</button>
+                    
+                </div>
+            </div>
+        </fieldset> 
+    </form>
+</div>

@@ -1,0 +1,111 @@
+<div class="listar-dashboardbanner">
+    <ol class="listar-breadcrumb">
+        <li><h3><a href="">Home</a>
+            >
+            <a href="">My Profile</a>
+            >
+            <a href="">Setting</a></h3>
+        </li>
+        
+    </ol>
+    <h1>My Profile</h1>
+    <div class="listar-description">
+        
+    </div>
+</div>
+
+<div id="listar-content" class="listar-content">
+    <form class="listar-formtheme listar-formaddlisting" [formGroup]='registerForm' (ngSubmit)="updateUser()">
+        <fieldset>
+            <div class="listar-boxtitle">
+                <h3>Hello : {{dataSource.pseudo}}</h3>
+            </div>
+            <div class="listar-dashboardmyprofile">
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label><h4>Your Name : {{dataSource.Name}} </h4></label>
+                            <input type="text" formControlName="Name" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label><h4>Email Address :{{dataSource.email}}</h4></label>
+                            <input type="email" formControlName="email" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label><h4>Phone Number : {{dataSource.tel}}</h4></label>
+                            <input type="text" formControlName="tel" class="form-control" placeholder="">
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label><h4>Ville : {{dataSource.ville}}</h4></label>
+                            <input type="url" formControlName="ville" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label><h4>Password</h4></label>
+                            <input type="password" formControlName="password" class="form-control" placeholder="*********">
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Update Informations</button>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="listar-boxtitle">
+                <h3>Social Connection</h3>
+            </div>
+            <div class="listar-dashboardsocial">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Facebook</label>
+                            <input type="text" name="name" class="form-control" placeholder="enter facebook profile url">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Twitter</label>
+                            <input type="email" name="email" class="form-control" placeholder="enter twitter profile url">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Linkedin</label>
+                            <input type="text" name="phonenumber" class="form-control" placeholder="enter linkedin profile url">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Google</label>
+                            <input type="url" name="yoururl" class="form-control" placeholder="enter google profile url">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Instagram</label>
+                            <input type="url" name="yoururl" class="form-control" placeholder="enter Instagram profile url">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group listar-dashboardfield">
+                            <label>Pinterest</label>
+                            <input type="url" name="yoururl" class="form-control" placeholder="enter pintrest profile url">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="btn" class="btn btn-secondary btn-lg btn-block">Update Social media </button>
+        </fieldset>
+        
+    </form>
+</div>

@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+<video autoplay muted loop id="myVideo">
+    <source [src]="bg" type="video/mp4">
+  </video>
+  <form class="form">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4">
+    <div class="nav nav-tabs" id="search-default" style="width:100%; display: flex;text-align:center; background-color:#555250c4; ">
+        <li class="nav-item" style="width:35%; ">
+            
+
+
+        
+
+        
+        <li class="nav-item " style="width:100%; ">
+            <a class="nav-link" id="trigger-search-with-vin" data-toggle="tab"
+                href="#bloc-search-with-vin"><span style="color: #f8c635; font-weight:bold;"><span>Find This Car</span>
+       
+
+
+                <div class="tab-content" style="background-color: #555250c4;border: 0px solid #f8c635;border-top: 0px;border-radius:0px 0px 5px 5px;box-shadow:0px 1px 5px 2px #f8c635;">
+                    <div class="tab-pane active" id="bloc-search-with-reg">
+
+                        <div class="row" style="padding: 0px 0px 0px 0px; text-align: center;margin:auto;">
+                            <form method="get" action="" onsubmit="return mySubmitFunction(event,'registration')"
+                                class="spas-form spas-form-center" style="">
+                                <div style="padding: 20px 0px 0px; margin:auto;" class="">
+                                    <div class="row" style="padding-bottom: 20px; width:298px; padding-top:10px;margin:auto;">
+                                        <div class="" title="" id="77_chosen" style="color: white;">
+                                            <ul class="">
+                                            
+                                            <div class="col-sm-6 col-xs-6" style="text-align:right;">
+
+                                                
+                                            
+
+                                        </div>
+                                    </ul>
+                                    <a class="" onclick="showTypeSerie()" style="display:none">
+                                        <span id="typeSerieSelected" name='TU'>Immatriculation TU</span>
+                                        <div><b></b></div>
+                                    </a>
+                                   
+                                </div>
+
+                            </div>
+                             <div style=" padding-bottom: 10px;" id="blockMatTU">
+                                        <div
+                                            style="height:57px;width:272px;background-image: url('./assets/img/matricule.png');position:relative;margin:auto;">
+                                            <input placeholder="* * *" type="number" class="form-control no-spin"
+                                                id="numSerie" min="1" max="999" maxlength="3" style="
+                                                        display: inline;
+                                                        width: 80px;
+                                                        top: 6px;
+                                                        position: absolute;
+                                                        left: 13px;				
+                                                        border-radius: 5px;
+                                                        font-weight:bold;
+                                                        background-color:rgba(0,0,0,0);
+                                                        color: white;
+                                                        font-size:24px">
+                                            <input placeholder="* * * *" type="number" class="form-control no-spin"
+                                                id="numCar" min="1" max="9999" maxlength="4" style="
+                                                        display: inline;
+                                                        width: 100px;
+                                                        top: 6px;
+                                                        position: absolute;
+                                                        right: 13px;
+                                                        border-radius: 5px;
+                                                        font-weight:bold;
+                                                        background-color:rgba(0,0,0,0);
+                                                        color: white;
+                                                        font-size:24px">
+
+                                        </div>
+                                        <br>
+                                        <div class="spas-attr-inner cf">
+                                            <button button class="btn btn-search " data-type="private"
+                                                name="btn-search-vin"
+                                                style="background-color: #f8c635 !important; color: #000000 !important;">
+                                                
+                                                <i style='color: #fff;' class="fa fa-search fa-search-auto"></i> <i style="display: none;color: #fff;" class="fa fa-spinner fa-spin-auto"></i>
+
+                                                Recherche</button>
+                                        </div>
+                                        <div class=" "
+                                style="margin: 20px 0px 0px 0px;background-color: #28282994;text-align: center;">
+                                <span style="color: #f8c635; "><i>1<sup>&nbsp;er</sup> site d'identification des pièces par VIN</i></span>
+                            </div>
+                            </div>
+ </div></form>                      

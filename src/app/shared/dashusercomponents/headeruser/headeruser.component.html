@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+
+      <button mat-icon-button (click)='toggleSideBar()' class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span>My Dashboard</span>
+      <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" >
+        <ul fxLayout="row" fxLayoutGap="20px">
+
+          <li>
+            <button mat-icon-button [routerLink]="['/profile/account/',iduser]" routerLinkActive="router-link-active">
+              <mat-icon>settings</mat-icon>
+            </button>
+          </li>
+          <li>
+            <button mat-icon-button [routerLink]="['/']" routerLinkActive="router-link-active">
+              <mat-icon>home</mat-icon>
+            </button>
+          </li>
+          
+          <li>
+            <button mat-button [matMenuTriggerFor]="menu"><mat-icon>person_outline</mat-icon></button>
+            <form [formGroup]="loginForm" (ngSubmit)="logout()">
+              <mat-menu #menu="matMenu">
+                <button type="submit" (click)="logout()" mat-menu-item ><mat-icon>exit_to_app</mat-icon>
+                  sign out
+                </button>
+              </mat-menu>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

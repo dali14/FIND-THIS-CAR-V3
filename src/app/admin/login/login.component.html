@@ -1,0 +1,20 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="20">
+        <mat-toolbar color="primary">Login Dashboard</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <mat-form-field>
+                <input matInput placeholder="Login" value="" class="login-form" formControlName="login">
+            </mat-form-field>
+            <mat-form-field>
+                    <mat-label class="login-form">Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password">
+                    <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            <button mat-raised-button type="submit">Login</button>
+            <br>
+            <p ><a routerLink="/admin/resetpassword">Forget password !</a></p>
+          </form>
+      </mat-card>
+</div>

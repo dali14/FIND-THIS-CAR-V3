@@ -1,0 +1,39 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Users lists</h1>
+        <p class="lead text-muted">List Of All Users In this Site(Dashbord admin)</p>
+        <input type="text" #myInput [(ngModel)]="nom" (input)="search()" />
+        
+        
+      </div>
+    </div>
+  </section>
+<div class="album py-5 bg-light">
+    <div class="container">
+  
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let u of dataSource ">
+          <div class="card shadow-sm">
+            
+  
+            <div class="card-body">
+              <h3>{{ u.Name }}</h3>
+              
+              <p class="card-text">Ville : {{ u.ville}}</p>
+              <p class="card-text">Telephone : {{ u.tel}}</p>
+              <p class="card-text">Email : {{ u.email}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" [routerLink]="['/profile/account/',u._id]" routerLinkActive="router-link-active"  class="btn btn-sm btn-outline-secondary"><i
+                      class="fa fa-trash"></i>show More</button>
+                 
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
